@@ -1,9 +1,16 @@
-export default function Itemlist({items} : any)
-{
-    return(<div>
-        {
-            items.map((item : any,index : number)=> <div key={index}>{item}</div>) 
-        }
-        </div>
-    )
+function Item(props : any) {
+  return (
+    <div>
+      <img src={'https://i.imgur.com/MK3eW3As.jpg'} />
+      <br />
+      <h2>{props.item}</h2>
+    </div>
+  );
+}
+
+export default function Itemlist({ items }: any) {
+  const listItems = items.map((item: any, index: any) => (
+    <Item key={index} item={item} />
+  ));
+  return <div>{listItems}</div>;
 }
