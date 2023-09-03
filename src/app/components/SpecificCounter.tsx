@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-function ChildCounter({initialValue}){
+function ChildCounter({initialValue} : any){
     const [count,setCount] = useState(initialValue)
     const inc = () =>{
         setCount(count+1)
@@ -15,7 +15,7 @@ function ChildCounter({initialValue}){
     )
 }
 
-export default function SpecificCounter(){
+export default function SpecificCounter(initialValue){
     const [data,setData] = useState(1)
     const handler = () =>{
         setData(data+1)
